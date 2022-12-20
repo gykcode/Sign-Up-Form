@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <title>Sign-up Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="picture">
+            <div class="logo">
+                <img src="./image/half-moon.png" alt="logo" class="moon">
+                <h1 class="logo-text">Space<span>Migration</span></h1>
+            </div>
+        </div>
+        <div class="right-text">
+            <div class="msg-text left">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+                <p>Sign up <em>now</em> to get started.</p>
+                <p class="remote-text">You <em>know</em> you want to.</p>
+            </div>
+            <form action="#">
+                <div class="form-text">
+                    <h2 class="form-header">Let's do this!</h2>
+                    <div class="input">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" name="firstName" id="firstName" placeholder=" " required>
+                    </div>
+                    <div class="input">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" name="lastName" id="lastName" placeholder=" " required>
+                    </div>
+                    <div class="input">
+                        <label for="email">Email:</label>
+                        <input type="text" name="email" id="email" placeholder="username@email.com" required>
+                    </div>
+                    <div class="input">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" name="phone" id="phone" placeholder="XXXXXXXXXX" required>
+                    </div>
+                    <div class="input">
+                        <label for="password">Password:</label>
+                        <input type="text" name="password" id="password" placeholder="*********" required>
+                    </div>
+                    <div class="input">
+                        <label for="confirm-pass">Confirm Password:</label>
+                        <input type="text" name="confirm-pass" id="confirm-pass" placeholder="*********" required>
+                    </div>
+                </div>
+                <div class="create-btn">
+                    <button type="submit">Create Account</button>
+                </div>
+            </form>
+            <div class="login">
+                <p>Already have an account?</p><a href="#">Login here.</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+          utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+      </script>
+</body>
+</html>
